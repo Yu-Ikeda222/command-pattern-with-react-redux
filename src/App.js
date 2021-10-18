@@ -11,7 +11,7 @@ import Result from "./components/Result";
 class App extends Component {
   render() {
     const { calculator, actions } = this.props;
-    console.log("commandClass", calculator.commandClass);
+    console.log("commandManager", calculator.valueManager);
     console.log("commandManager", calculator.commandManager);
 
     return (
@@ -22,7 +22,7 @@ class App extends Component {
               result={
                 calculator.commandManager.showingResult
                   ? calculator.commandManager.execute()
-                  : calculator.commandClass.value
+                  : calculator.valueManager.value
               }
             />
           </div>
